@@ -27,6 +27,9 @@ body{
   color: var(--maindark);
 
 }
+.badge{
+  font-size: 1.2rem  !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

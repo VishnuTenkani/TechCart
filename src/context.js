@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {storeProduct,detailsProduct} from '../src/data'
-import { log } from 'util';
-import { DH_UNABLE_TO_CHECK_GENERATOR } from 'constants';
+
 
 const ProductContext =React.createContext();
 
@@ -38,7 +37,7 @@ class ProductProvider extends Component {
         this.setState(()=>{
             return {detailsproduct:product};
         })
-        console.log(id);
+        
     }
     handleAddToCart = (id) =>{
         let tempProducts = [...this.state.products];
@@ -123,7 +122,7 @@ class ProductProvider extends Component {
         const total = subTotal + tax;
         this.setState(()=>{
             return {cartSubTotal :subTotal,cartTax:tax,cartTotal:total}
-        },()=>{console.log(this.setState.cartSubTotal);
+        },()=>{;
         })
 
     }
